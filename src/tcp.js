@@ -104,7 +104,7 @@ class SLVideoTcpClient {
 				return
 			}
 
-			this.lastError = `Timeout de connexion après ${CONNECT_TIMEOUT_MS} ms`
+			this.lastError = `Connection timed out after ${CONNECT_TIMEOUT_MS} ms`
 			socket.destroy()
 		}, CONNECT_TIMEOUT_MS)
 
@@ -145,7 +145,7 @@ class SLVideoTcpClient {
 			}
 
 			this.lastError = error.message
-			this.log?.('warn', `Erreur TCP SLVideo: ${error.message}`)
+			this.log?.('warn', `SLVideo TCP error: ${error.message}`)
 		})
 
 		socket.on('close', () => {
@@ -157,7 +157,7 @@ class SLVideoTcpClient {
 			this.socket = null
 			this.isConnected = false
 			this.readBuffer = ''
-			this.onDisconnected?.(this.lastError || 'Connexion fermée')
+			this.onDisconnected?.(this.lastError || 'Connection closed')
 
 			if (this.host) {
 				this.reconnectTimer = setTimeout(() => {
@@ -178,7 +178,7 @@ class SLVideoTcpClient {
 		try {
 			tcpMessage = JSON.parse(line)
 		} catch (error) {
-			this.log?.('warn', `JSON TCP invalide reçu depuis SLVideo: ${error.message}`)
+			this.log?.('warn', `Invalid TCP JSON received from SLVideo: ${error.message}`)
 			return
 		}
 

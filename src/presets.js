@@ -12,8 +12,8 @@ module.exports = function (self) {
 
 			presets[presetId] = {
 				type: 'button',
-				category: 'SLVideo Positions',
-				name: shortcut ? `Raccourci Ligne ${row} / Colonne ${column} - ${shortcut.name}` : `Raccourci Ligne ${row} / Colonne ${column} vide`,
+				category: 'SLVideo Grid',
+				name: shortcut ? `Row ${row} / Column ${column} - ${shortcut.name}` : `Row ${row} / Column ${column} empty`,
 				style: {
 					text: '',
 					size: 'auto',
@@ -34,7 +34,7 @@ module.exports = function (self) {
 							row,
 							column,
 						},
-						headline: shortcut ? `Affichage de la case ${locationLabel}` : `Aucun raccourci sur ${locationLabel}`,
+						headline: shortcut ? `Display slot ${locationLabel}` : `No shortcut on ${locationLabel}`,
 					},
 				],
 				steps: [
@@ -48,7 +48,7 @@ module.exports = function (self) {
 									row,
 									column,
 								},
-								headline: shortcut ? `Déclenche le raccourci de ${locationLabel}` : `Aucun raccourci sur ${locationLabel}`,
+								headline: shortcut ? `Trigger shortcut for ${locationLabel}` : `No shortcut on ${locationLabel}`,
 							},
 						],
 						up: [],

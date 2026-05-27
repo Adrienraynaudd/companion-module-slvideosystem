@@ -1,10 +1,10 @@
 module.exports = async function (self) {
 	self.setFeedbackDefinitions({
 		shortcut_state: {
-			name: 'État visuel du raccourci',
+			name: 'Shortcut visual state',
 			type: 'advanced',
 			description:
-				'Affiche le raccourci SLVideo de la case ligne/colonne, sauf si un raccourci précis est sélectionné.',
+				'Display the SLVideo shortcut for the selected row/column unless a specific shortcut is selected.',
 			options: self.getShortcutOptionFields(),
 			callback: async (feedback) => {
 				return self.getShortcutFeedbackStyleForControl(null, feedback.options)

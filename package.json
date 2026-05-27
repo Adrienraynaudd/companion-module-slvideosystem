@@ -1,6 +1,7 @@
 {
 	"name": "companion-module-slvideosystem",
 	"version": "0.1.0",
+	"description": "Companion module for controlling SLVideoSystem over TCP.",
 	"main": "src/main.js",
 	"scripts": {
 		"format": "prettier -w .",
@@ -9,8 +10,12 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/slvideosystem/companion-module-slvideosystem.git"
+		"url": "git+https://github.com/Adrienraynaudd/companion-module-slvideosystem.git"
 	},
+	"bugs": {
+		"url": "https://github.com/Adrienraynaudd/companion-module-slvideosystem/issues"
+	},
+	"homepage": "https://github.com/Adrienraynaudd/companion-module-slvideosystem#readme",
 	"engines": {
 		"node": "^22.20",
 		"yarn": "^4"

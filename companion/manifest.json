@@ -2,17 +2,17 @@
 	"$schema": "../node_modules/@companion-module/base/assets/manifest.schema.json",
 	"type": "connection",
 	"id": "slvideosystem",
-	"name": "slvideosystem",
+	"name": "SLVideoSystem",
 	"shortname": "slvideo",
-	"description": "Bitfocus Companion module for SLVideoSystem over TCP.",
+	"description": "Companion module for controlling SLVideoSystem over TCP.",
 	"version": "0.1.0",
 	"license": "MIT",
-	"repository": "git+https://github.com/slvideosystem/companion-module-slvideosystem.git",
-	"bugs": "https://github.com/slvideosystem/companion-module-slvideosystem/issues",
+	"repository": "git+https://github.com/Adrienraynaudd/companion-module-slvideosystem.git",
+	"bugs": "https://github.com/Adrienraynaudd/companion-module-slvideosystem/issues",
 	"maintainers": [
 		{
-			"name": "STRAMATEL",
-			"email": "STRAMATEL@example.com"
+			"name": "Adrienraynaudd",
+			"github": "Adrienraynaudd"
 		}
 	],
 	"runtime": {
