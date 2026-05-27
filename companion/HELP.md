@@ -1,6 +1,6 @@
 # SLVideoSystem
 
- This Companion module connects to the SLVideoSystem TCP server on port 7891.
+This Companion module connects to the SLVideoSystem TCP server on port 7891.
 
 ## Configuration
 

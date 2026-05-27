@@ -8,7 +8,11 @@ module.exports = function (self) {
 			const shortcut = self.getShortcutForGridPosition({ row, column })
 			const presetId = `slot_${row}_${column}`
 			const locationLabel = `${row}/${column}`
-			const previewText = shortcut ? (shortcut.hasIcon && shortcut.iconBase64 ? '' : self.formatShortcutText(shortcut)) : locationLabel
+			const previewText = shortcut
+				? shortcut.hasIcon && shortcut.iconBase64
+					? ''
+					: self.formatShortcutText(shortcut)
+				: locationLabel
 
 			presets[presetId] = {
 				type: 'button',

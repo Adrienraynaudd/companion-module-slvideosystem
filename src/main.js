@@ -264,7 +264,7 @@ class ModuleInstance extends InstanceBase {
 		this.shortcutsByGridSlot = new Map(
 			this.shortcuts
 				.filter((shortcut) => shortcut.position)
-				.map((shortcut) => [makeGridSlotKey(shortcut.position.row, shortcut.position.column), shortcut])
+				.map((shortcut) => [makeGridSlotKey(shortcut.position.row, shortcut.position.column), shortcut]),
 		)
 
 		if (this.lastTriggeredShortcut && !this.shortcutsByGuid.has(this.lastTriggeredShortcut.guid)) {
@@ -539,7 +539,7 @@ class ModuleInstance extends InstanceBase {
 				{ variableId: `shortcut_${slot}_column`, name: `Shortcut ${slot} column` },
 				{ variableId: `shortcut_${slot}_has_icon`, name: `Shortcut ${slot} has icon` },
 				{ variableId: `shortcut_${slot}_backcolor`, name: `Shortcut ${slot} background color` },
-				{ variableId: `shortcut_${slot}_forecolor`, name: `Shortcut ${slot} text color` }
+				{ variableId: `shortcut_${slot}_forecolor`, name: `Shortcut ${slot} text color` },
 			)
 		}
 
