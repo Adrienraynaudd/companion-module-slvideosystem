@@ -1,19 +1,12 @@
 module.exports = function (self) {
 	self.setActionDefinitions({
-		sample_action: {
-			name: 'My First Action',
-			options: [
-				{
-					id: 'num',
-					type: 'number',
-					label: 'Test',
-					default: 5,
-					min: 0,
-					max: 100,
-				},
-			],
-			callback: async (event) => {
-				console.log('Hello world!', event.options.num)
+		trigger_shortcut: {
+			name: 'Déclencher le raccourci',
+			description:
+				'Déclenche le raccourci SLVideo de la case ligne/colonne, sauf si un raccourci précis est sélectionné.',
+			options: self.getShortcutOptionFields(),
+			callback: async (action) => {
+				self.triggerShortcutForControl(null, action.options)
 			},
 		},
 	})
